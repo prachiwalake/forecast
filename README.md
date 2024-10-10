@@ -35,6 +35,5 @@ Things you may want to cover:
 * How to run the test suite
   - Unit tests added to check address form validation and redirection using Rspec.
 
-  - To run test please run below command
-  rspec spec
+  - To run test please run below command: rspec spec
 
