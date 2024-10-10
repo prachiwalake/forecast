@@ -5,6 +5,7 @@ module OpenWeatherApi
   extend ActiveSupport::Concern
 
   class << self
+    ## fetch weather data. First check for cache if not exists then call API
     def fetch_weather_data(address, zipcode)
       fetched_from_cache = Rails.cache.exist?("#{zipcode}")
       result = Rails.cache.fetch("#{zipcode}", expires_in: 30.minutes) do
@@ -13,7 +14,8 @@ module OpenWeatherApi
       result[:message] = "Weather forecast data fetched from Cache." if fetched_from_cache
       return result
     end
-    
+
+    ## net_http logic to get response
     def call_api(url, zipcode)
       begin
         uri = URI.parse(url)
@@ -30,6 +32,7 @@ module OpenWeatherApi
       end
     end
 
+    ## get OpenWeather API url configured in settings.yml and get the weather response for requested address and zipcode in imperial units
     def get_current_weather(address, zipcode)
       begin
         url = Settings.open_weather.base_url + Settings.open_weather.weather_data_api_url + "?q=#{address}&APPID=#{Settings.open_weather.api_key}&units=imperial"
