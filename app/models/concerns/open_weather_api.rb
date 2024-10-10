@@ -22,7 +22,7 @@ module OpenWeatherApi
         response = Net::HTTP.get_response(uri)
         response_data = JSON.parse(response.body)
         if response_data["cod"] == 200 && response_data["weather"].present?
-          return  {status: "success", code: response_data["cod"], message: "weather forecast data restored.", data: response_data}
+          return  {status: "success", code: response_data["cod"], message: "Weather forecast data restored.", data: response_data}
         else
           return {status: "success", code: response_data["cod"], message: response_data["message"]}
         end
