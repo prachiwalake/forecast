@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container-fluid">
+		<h3> Weather Forecast </h3>
+		<%= form_tag(check_weather_path, :method => :get, :id => "forecast_form") do %>
+			<div>
+				<%= text_field_tag :address, nil, placeholder: 'Enter address' %>
+				<%= submit_tag 'Search' %>
+			</div>
+		<% end %>
+	</div>
+</nav>
