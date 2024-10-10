@@ -12,10 +12,10 @@
 <br>
 
 <div id="min_temp">
-	Min : <%= (response_data["main"]["temp_min"].round rescue nil) %> &deg;F
+	Low : <%= (response_data["main"]["temp_min"].round rescue nil) %> &deg;F
 </div>
 <div id="max_temp">
-	Max : <%= (response_data["main"]["temp_max"].round rescue nil)%> &deg;F
+	High : <%= (response_data["main"]["temp_max"].round rescue nil)%> &deg;F
 </div>
 <div id="sunrise">
 	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sunrise" viewBox="0 0 16 16">

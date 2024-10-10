@@ -24,8 +24,8 @@ RSpec.feature "Address and zipcode Form Submission", type: :feature do
     # Step 3: Check if the user is redirected to the check weathers path which shows weather details
     expect(current_path).to include("/check_weather")
     expect(page).to have_content("Feels")
-    expect(page).to have_content("Min")
-    expect(page).to have_content("Max")
+    expect(page).to have_content("Low")
+    expect(page).to have_content("High")
     
   end
 end
