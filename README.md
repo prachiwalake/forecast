@@ -49,3 +49,10 @@ Things you may want to cover:
 
   - To run test please run below command: rspec spec
 
+* To run Project
+  - Run bundle install in a project diretory
+  - Rename /config/settings.yml.dev with settings.yml
+  - Replace api_key in settings.yml with your OpenWeatherApi key.
+    api_key: '7f3b77c52e07666c3696bfa81a7d0dd1'
+  - Start the Rails server.
+
