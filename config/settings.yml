@@ -1,4 +1,4 @@
 open_weather:
-  api_key: '7f3b77c52e07666c3696bfa81a7d0dd1'
+  api_key: 'XXXXXXXXXXXXXXXXXXXXX'
   base_url: 'http://api.openweathermap.org'
   weather_data_api_url: '/data/2.5/weather'
